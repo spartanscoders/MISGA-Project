@@ -4,10 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <title><?php echo $page_title; ?></title>
-        <link href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css"/>
+        <link href="<?php echo base_url('MISGA-Project/assets/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css"/>
 
-        <script src="<?php echo base_url('assets/jquery-2.2.4.min.js'); ?>" type="text/javascript"></script>
-        <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js'); ?>" type="text/javascript"></script>
+        <script src="<?php echo base_url('MISGA-Project/assets/jquery-2.2.4.min.js'); ?>" type="text/javascript"></script>
+        <script src="<?php echo base_url('MISGA-Project/assets/bootstrap/js/bootstrap.min.js'); ?>" type="text/javascript"></script>
     </head>
     <body>
         <div class="container">
