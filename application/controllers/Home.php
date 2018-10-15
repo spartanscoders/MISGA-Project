@@ -9,8 +9,10 @@ defined('BASEPATH') OR exit('No direct script access allowed'); //For security r
  */
 
 class Home extends CI_Controller {
-    
+
     public function index() {
+
+    
         $data = [
             'page_title' => 'Home View',
             'main_view' => 'home_view' //name of the view relative to views folder
