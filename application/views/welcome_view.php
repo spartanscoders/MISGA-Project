@@ -1,16 +1,7 @@
-<!-- This is  the home view located under views/home_view.php  -->
 <?php
-if ($this->session->flashdata('user_registered')):
-	echo $this->session->flashdata('user_registered');
-endif;
+defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
-<?php
-if ($this->session->flashdata('registration_failed')):
-	echo $this->session->flashdata('registration_failed');
-endif;
-?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>VictoryPro</title>
@@ -25,6 +16,8 @@ endif;
 	<script type="text/javascript" src="assets/js/coin-slider.min.js"></script>
 </head>
 <body>
+	 -->
+	<!-- 
 
 	<div class="main">
 		<div class="header">
@@ -156,8 +149,8 @@ endif;
 					</div>
 				</div>
 			</div>
+ -->
 
-			
 				<form method="" action="<?php echo base_url();?>Home">
 
 				<input type="submit" value="Login">
@@ -171,5 +164,4 @@ endif;
 			
 		</body>
 		</html>
-
 

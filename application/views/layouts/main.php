@@ -13,7 +13,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <h2>Login</h2>
                     <?php
                     if ($this->session->flashdata('errors')):
@@ -46,7 +46,7 @@
                     </form> -->
 
 
-                    <div class="col-xs-12">
+                    <div class="col-xs-14">
                         <?php
                         /*
                          * CodeIgniter way of decalring HTML form and form controls 

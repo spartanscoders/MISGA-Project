@@ -38,7 +38,8 @@ class Users extends CI_Controller {
             $user_id = $this->user_model->login_user($username, $password);
             if ($user_id) {
                 //This is where the user is actually logs in
-                echo "User login was success";
+                //echo "User login was success";
+                $this->load->view('lessons_view');
             } else {
                 //The user was not found or the password did not match with the DB records
                 echo "User login failed";
