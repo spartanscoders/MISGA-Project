@@ -6,14 +6,14 @@
         <title><?php echo $page_title; ?></title>
         <link href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css"/>
 
-        <script src="<?php echo base_url('assets/jquery-2.2.4.min.js'); ?>" type="text/javascript"></script>
+        <script src="<?php echo base_url('assets/jquery-2.2.4.min.js'); ?>" type="text  /javascript"></script>
         <script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js'); ?>" type="text/javascript"></script>
     </head>
     <body>
         <div class="container">
             <div class="row">
 
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                     <h2>Login</h2>
                     <?php
                     if ($this->session->flashdata('errors')):
@@ -46,7 +46,7 @@
                     </form> -->
 
 
-                    <div class="col-xs-14">
+                    <div class="col-xs-12">
                         <?php
                         /*
                          * CodeIgniter way of decalring HTML form and form controls 
