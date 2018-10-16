@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 16, 2018 at 03:47 PM
+-- Generation Time: Oct 17, 2018 at 12:47 AM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tbl_lessons` (
   `lessonID` char(11) NOT NULL,
-  `lessson_desc` varchar(255) NOT NULL,
-  `moduleID` char(11) NOT NULL,
+  `lesson_desc` varchar(255) DEFAULT NULL,
+  `moduleID` char(11) DEFAULT NULL,
   `vid_url` varchar(2083) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -39,7 +39,7 @@ CREATE TABLE `tbl_lessons` (
 -- Dumping data for table `tbl_lessons`
 --
 
-INSERT INTO `tbl_lessons` (`lessonID`, `lessson_desc`, `moduleID`, `vid_url`) VALUES
+INSERT INTO `tbl_lessons` (`lessonID`, `lesson_desc`, `moduleID`, `vid_url`) VALUES
 ('LES0001', 'Lesson 1', 'MOD001', ''),
 ('LES00011', 'Lesson 11', 'MOD004', ''),
 ('LES00012', 'Lesson  12', 'MOD005', ''),
@@ -97,7 +97,8 @@ INSERT INTO `tbl_modules` (`moduleID`, `module_desc`, `subID`) VALUES
 ('MOD002', 'Module sample 2', 'SUB002'),
 ('MOD003', 'Module sample 3', 'SUB002'),
 ('MOD004', 'Module sample 4', 'SUB003'),
-('MOD005', 'Module sample 5', 'SUB001');
+('MOD005', 'Module sample 5', 'SUB001'),
+('MOD006', 'module 6', 'SUB001');
 
 -- --------------------------------------------------------
 
@@ -176,7 +177,8 @@ INSERT INTO `users` (`uid`, `username`, `password`, `first_name`, `last_name`, `
 (3, 'Geeth', '$2y$10$wFoj8LaYhfj9wbOOrR.ageeIw8nvILKK5YWFUoBvG8IYuaohpTXHK', 'Geeth', 'Fonseka', 'geethmohan@yahoo.com'),
 (4, 'Gayan', '$2y$10$ihlCz6owrFi5dZNz.5SDt..7cIYhCu8qbA8JVXMbev4.Y1zPPg7zO', 'Gayan', 'Pathirana', 'geethmohan@yahoo.com'),
 (5, 'new1', '$2y$10$qZ.eEdPb3NajzUctLYSC2OdvgceJN.nLawAx/7m/xTOpbTBBBMipO', 'New1', 'lnams', 'geethmohan@yahoo.com'),
-(6, 'Pradeep', '$2y$10$EbVvF8/ayhsnouKYCmoFSeUpMWEii1A6dF7NgjtDHmPkBdKclMOK2', 'Pradeep', 'Kumara', 'geethmohan@yahoo.com');
+(6, 'Pradeep', '$2y$10$EbVvF8/ayhsnouKYCmoFSeUpMWEii1A6dF7NgjtDHmPkBdKclMOK2', 'Pradeep', 'Kumara', 'geethmohan@yahoo.com'),
+(7, 'Buwa', '$2y$10$vyEbzcZ5nVuSlZvpwbhzc.eudAq.lc./P7eZ1kD5ubfp5PrqUaMzm', 'Buwa', 'Perera', 'test@ymail.com');
 
 --
 -- Indexes for dumped tables
@@ -216,7 +218,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

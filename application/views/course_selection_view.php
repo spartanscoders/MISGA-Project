@@ -40,14 +40,15 @@
 <br />
 <div class="form-group">
  <select name="lesson" id="lesson" class="form-control input-lg">
-  <option value="">Select the Lesson</option>
+  <option value="">Select the Lesson_A</option>
 </select>
 </div>
 </div>
 </body>
 </html>
 <script>
-  $(document).ready(function(){
+  $(document).ready(function()
+  {
    $('#subject').change(function(){
     var subID = $('#subject').val();
     if(subID != '')
@@ -59,14 +60,14 @@
       success:function(data)
       {
        $('#module').html(data);
-       $('#lesson').html('<option value="">Select Lesson</option>');
+       $('#lesson').html('<option value="">Select Lesson_B</option>');
      }
    });
    }
    else
    {
-     $('#module').html('<option value="">Select Module</option>');
-     $('#lesson').html('<option value="">Select Lesson</option>');
+     $('#module').html('<option value="">Select Module_C</option>');
+     $('#lesson').html('<option value="">Select Lesson_C</option>');
    }
  });
 
@@ -86,7 +87,7 @@
    }
    else
    {
-     $('#lesson').html('<option value="">Select Lesson</option>');
+     $('#lesson').html('<option value="">Select Lesson_d</option>');
    }
  });
 

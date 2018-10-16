@@ -14,7 +14,7 @@ class Home extends CI_Controller {
 
     
         $data = [
-            'page_title' => 'Home View',
+            'page_title' => 'Matrix DSL-Home',
             'main_view' => 'home_view' //name of the view relative to views folder
         ];
         $this->load->view('layouts/main', $data);

@@ -12,8 +12,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body>
 
-		<h1> This Page should include Levels--> Subjects-->Modules-->Lessons and should load the respective vedio</h1>
-		<h2> When you click the button it should open mcq_view - need to be developed</h2>
+		<h1> This Page should include lesson objectives, duration, presenter and the vedio
+		<h2> When you click the button it should open mcq_view</h2>
 
 	<form method="" action="<?php echo base_url();?>Mcq/mcqDisplay">
 

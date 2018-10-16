@@ -14,7 +14,7 @@
             <div class="row">
 
                 <div class="col-sm-3">
-                    <h2>Login</h2>
+                    <h3>Login</h3>
                     <?php
                     if ($this->session->flashdata('errors')):
                         echo '<div class="alert alert-danger">';
@@ -73,7 +73,10 @@
 
                         <div class="form-group">
                             <?php echo form_submit(['value' => 'Login', 'name' => 'submit', 'class' => 'btn btn-primary']); ?>
+                            &nbsp
+                            <a class="btn btn-primary" href="<?php echo base_url ('/Register');?>">Enroll Today</a>
                         </div>
+
 
                         <?php echo form_close(); ?>
                     </div>
