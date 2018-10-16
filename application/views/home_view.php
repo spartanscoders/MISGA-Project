@@ -33,7 +33,7 @@ endif;
 					<ul>
 						<li class="active"><a href="index.html"><span>Home</span></a></li>
 						<li><a href="support.html"><span>About Us</span></a></li>
-						<li><a href="about.html"><span>Courses</span></a></li>
+						<li><a href="<?php echo base_url ('/Course_selection');?>"><span>Courses</span></a></li>
 						<li><a href="<?php echo base_url ('/Register');?>"><span>Register</span></a></li>
 						<li><a href="contact.html"><span>Contact Us</span></a></li>
 					</ul>
