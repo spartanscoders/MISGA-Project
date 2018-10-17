@@ -15,7 +15,13 @@ class Course_selection extends CI_Controller {
 		$data['subjects'] = $this->course_selection_model->fetch_subjects();
 		$this->load->view('course_selection_view', $data);
 	}
-	
+
+    function view()
+    {
+        $data = $this->course_selection_model->fetch_selected_lesson('LES0001');
+
+        $this->load->view('lesson_view', $data);
+    }
 
 	function fetch_modules()
 	{

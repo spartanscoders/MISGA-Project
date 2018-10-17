@@ -37,6 +37,14 @@ function fetch_lessons($moduleID)
  return $output;
 }
 
+function fetch_selected_lesson($lessionID) {
+
+    $this->db->where('lessonID', $lessionID);
+    $query = $this->db->get('tbl_lessons');
+    return $query->row();
+
+}
+
 }
 
 
