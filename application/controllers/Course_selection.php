@@ -12,15 +12,26 @@ class Course_selection extends CI_Controller {
 
 	function index()
 	{
-		$data['subjects'] = $this->course_selection_model->fetch_subjects();
-		$this->load->view('course_selection_view', $data);
+		$data['levels'] = $this->course_selection_model->fetch_levels();
+		$this->load->view('course_selection_view', $data);		
 	}
+
+	
+	function fetch_subjects()
+	{
+		if($this->input->post('levelID'))
+		{
+			echo $this->course_selection_model->fetch_subjects($this->input->post('levelID'));
+		}
+	}
+
 
     function view()
     {
         $data = $this->course_selection_model->fetch_selected_lesson('LES0001');
         $this->load->view('lesson_view', $data);
     }
+
 
 	function fetch_modules()
 	{
@@ -38,5 +49,6 @@ class Course_selection extends CI_Controller {
 			echo $this->course_selection_model->fetch_lessons($this->input->post('moduleID'));
 		}
 	}
+
 
 	}

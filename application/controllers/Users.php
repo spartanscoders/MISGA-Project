@@ -1,12 +1,6 @@
 <?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
-/*
- * File path: application/controllers/Users.php
- * URL: http://localhost/index.php/users/login
- * This controller requires 'session' and 'form_validation' libraries
- * The above libraries are loaded through autoload.php
- */
 
 class Users extends CI_Controller {
 
@@ -22,11 +16,11 @@ class Users extends CI_Controller {
 
         if ($this->form_validation->run() === FALSE) {
             $data = [
-                //'errors' => validation_errors('<div class="alert alert-danger">', '</div>')
+               
                 'errors' => validation_errors()
             ];
             $this->session->set_flashdata($data);
-            redirect('home');
+            redirect('Home');
         } else {
             //The form validation was successfull
             //This is where the user will be logged in
@@ -39,7 +33,9 @@ class Users extends CI_Controller {
             if ($user_id) {
                 //This is where the user is actually logs in
                 //echo "User login was success";
-                $this->load->view('lessons_view');
+               // $this->load->view('lessons_view');
+
+                echo "You have logged in Geeth";
             } else {
                 //The user was not found or the password did not match with the DB records
                 echo "User login failed";
@@ -56,7 +52,7 @@ class Users extends CI_Controller {
         $this->form_validation->set_rules('confirm_password', 'Confirmation password', 'trim|required|min_length[4]|matches[password]');
         
         if ($this->form_validation->run() === FALSE) {
-            //We have validation errors
+            
             $data = [
                 'page_title' => 'User Registration',
                 'main_view' => 'register_view'

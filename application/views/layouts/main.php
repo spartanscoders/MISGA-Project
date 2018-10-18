@@ -14,7 +14,7 @@
             <div class="row">
 
                 <div class="col-sm-3">
-                    <h2>Login</h2>
+                    <h3>Login</h3>
                     <?php
                     if ($this->session->flashdata('errors')):
                         echo '<div class="alert alert-danger">';
@@ -22,37 +22,9 @@
                         echo '</div>';
                     endif;
                     ?>
-                    <!-- Basic HTML way of declaring the login form. Same code has been replicated using CodeIgniter below -->
-                    <!-- <form action="/home" method="post" class="form-horizontal">
-    
-                        <div class="form-group">
-                            <label>Username</label>
-                            <input class="form-control" type="text" placeholder="Username" name="username" />
-                        </div>
-    
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input class="form-control" type="password" placeholder="Password" name="password" />
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Confirm Password</label>
-                            <input class="form-control" type="password" placeholder="Confirm Password" name="confirm_password" />
-                        </div>
-    
-                        <div class="form-group">
-                            <input class="btn btn-primary" type="submit" name="submit" value="Login" />
-                        </div>
-                    </form> -->
-
-
+           
                     <div class="col-xs-12">
-                        <?php
-                        /*
-                         * CodeIgniter way of decalring HTML form and form controls 
-                         * This method is recomended and secured
-                         */
-                        ?>
+                        
 
                         <?php echo form_open('users/login', ['class' => 'form-horizontal']); ?>
 
@@ -73,7 +45,10 @@
 
                         <div class="form-group">
                             <?php echo form_submit(['value' => 'Login', 'name' => 'submit', 'class' => 'btn btn-primary']); ?>
+                            &nbsp
+                            <a class="btn btn-primary" href="<?php echo base_url ('/Register');?>">Enroll Today</a>
                         </div>
+
 
                         <?php echo form_close(); ?>
                     </div>
@@ -83,9 +58,10 @@
                     <?php
                     //The $main_view variable is sent from the controller
                     $this->load->view($main_view);
-                    ?>
+                    ?>                    
                 </div>
             </div>
         </div>
+        <?php $this->load->view('layouts/footer'); ?>
     </body>
 </html>
