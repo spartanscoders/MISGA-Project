@@ -19,7 +19,6 @@ class Course_selection extends CI_Controller {
     function view()
     {
         $data = $this->course_selection_model->fetch_selected_lesson('LES0001');
-
         $this->load->view('lesson_view', $data);
     }
 

@@ -20,10 +20,11 @@
     <h3 align="center">Lessions Objectives</h3>
     <?= $lesson_desc ?>
     <br/>
-    <?= $vid_url ?>
+    <?= $objectives ?>
     <br/>
+
     <video width="400" controls>
-        <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+        <source src="http://techslides.com/demos/sample-videos/small.mp4" type=video/mp4>
         Your browser does not support HTML5 video.
     </video>
     <div class="form-group">
