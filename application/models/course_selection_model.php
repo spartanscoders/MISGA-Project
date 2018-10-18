@@ -1,15 +1,29 @@
+
+
 <?php
 class course_selection_model extends CI_Model
 {
 
- function fetch_subjects()
+ function fetch_levels()
  {
-  $this->db->order_by("sub_desc", "ASC");
-  $query = $this->db->get("tbl_subjects");
+  $this->db->order_by("levelID", "ASC");
+  $query = $this->db->get("tbl_levels");
   return $query->result();
 
 }
 
+function fetch_subjects($levelID)
+{
+  $this->db->where('levelID', $levelID);
+  $this->db->order_by('sub_desc', 'ASC');
+  $query = $this->db->get('tbl_subjects');
+  $output = '<option value="">Select Subject</option>';
+  foreach($query->result() as $row)
+  {
+   $output .= '<option value="'.$row->subID.'">'.$row->sub_desc.'</option>';
+ }
+ return $output;
+}
 
 function fetch_modules($subID)
 {

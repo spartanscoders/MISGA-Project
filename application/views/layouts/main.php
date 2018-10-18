@@ -22,37 +22,9 @@
                         echo '</div>';
                     endif;
                     ?>
-                    <!-- Basic HTML way of declaring the login form. Same code has been replicated using CodeIgniter below -->
-                    <!-- <form action="/home" method="post" class="form-horizontal">
-    
-                        <div class="form-group">
-                            <label>Username</label>
-                            <input class="form-control" type="text" placeholder="Username" name="username" />
-                        </div>
-    
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input class="form-control" type="password" placeholder="Password" name="password" />
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Confirm Password</label>
-                            <input class="form-control" type="password" placeholder="Confirm Password" name="confirm_password" />
-                        </div>
-    
-                        <div class="form-group">
-                            <input class="btn btn-primary" type="submit" name="submit" value="Login" />
-                        </div>
-                    </form> -->
-
-
+           
                     <div class="col-xs-12">
-                        <?php
-                        /*
-                         * CodeIgniter way of decalring HTML form and form controls 
-                         * This method is recomended and secured
-                         */
-                        ?>
+                        
 
                         <?php echo form_open('users/login', ['class' => 'form-horizontal']); ?>
 
@@ -86,9 +58,10 @@
                     <?php
                     //The $main_view variable is sent from the controller
                     $this->load->view($main_view);
-                    ?>
+                    ?>                    
                 </div>
             </div>
         </div>
+        <?php $this->load->view('layouts/footer'); ?>
     </body>
 </html>

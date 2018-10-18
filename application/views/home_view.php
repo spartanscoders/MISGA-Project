@@ -35,7 +35,7 @@ endif;
 						<li><a href="support.html"><span>About Us</span></a></li>
 						<li><a href="<?php echo base_url ('/Course_selection');?>"><span>Courses</span></a></li>
 						<li><a href="<?php echo base_url ('/Register');?>"><span>Register</span></a></li>
-						<li><a href="contact.html"><span>Contact Us</span></a></li>
+						<li><a href="<?php echo base_url ('/Contact');?>"><span>Contact Us</span></a></li>
 					</ul>
 				</div>
 				<div class="logo">
@@ -91,8 +91,7 @@ endif;
 							<li><a href="<?php echo base_url ('/Register');?>">Sign Up</a></li>
 							<li><a href="#">Contact Us</a></li>
 						</ul>
-					</div>
-					
+					</div>				
 
 				</div>
 
@@ -104,7 +103,7 @@ endif;
 				<div class="col c1">
 					<h2><span>Image</span> Gallery</h2>
 					<a href="#"><img src="assets/images/gal1.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="assets/images/gal2.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="assets/images/gal3.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="assets/images/gal4.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="images/gal5.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="assets/images/gal6.jpg" width="75" height="75" alt="" class="gal" /></a> </div>
-					<div class="col c2">
+					<div class="col c2"> 
 						<h2><span>Services</span> Overview</h2>
 						<p>Curabitur sed urna id nunc pulvinar semper. Nunc sit amet tortor sit amet lacus sagittis posuere cursus vitae nunc.Etiam venenatis, turpis at eleifend porta, nisl nulla bibendum justo.</p>
 						<ul class="fbg_ul">
@@ -119,21 +118,13 @@ endif;
 						<p class="contact_info"> <span>Address:</span> 1458 TemplateAccess, USA<br />
 							<span>Telephone:</span> +123-1234-5678<br />
 							<span>FAX:</span> +458-4578<br />
-							<span>Others:</span> +301 - 0125 - 01258<br />
-							<span>E-mail:</span> <a href="#">mail@yoursitename.com</a> </p>
+							<span>Others:</span> +301 - 0125 - 01258<br/>
+							<span>E-mail:</span> <a href="#">mail@oursitename.com</a> </p>
 						</div>
 						<div class="clr"></div>
 					</div>
-				</div>
-				<div class="footer">
-					<div class="footer_resize">
-						<p class="lf">Copyright &copy; <a href="#">Spartons</a>. All Rights Reserved</p>
-						<p class="rf">Design by <a target="_blank" href="http://www.dreamtemplate.com/">Spartons</a></p>
-						<div style="clear:both;"></div>
-					</div>
-				</div>
+				</div>				
 			</div>
-
 		</body>
 		</html>
 

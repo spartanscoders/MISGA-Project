@@ -15,23 +15,34 @@
 </style>
 </head>
 <body>
- <div class="container box">
-  <br />
-  <br />
-  <h3 align="center">Make your choice to access the lesson tutorial(s)</h3>
-  <br />
-  <div class="form-group">
+  <div class="container">
+    <div class="row">        
+      <?php $this->load->view('layouts/header');?>       
+    </div>
+  </div>
+  <div class="container box">
+    <br /><br />
+    <h3 align="center">Make your choice to access the lesson tutorial(s)</h3>
+    <br />
+    <div class="form-group">
+     <select name="level" id="level" class="form-control input-lg">
+      <option value="">Select the Level</option>
+      <?php
+      foreach($levels as $row)
+      {
+       echo '<option value="'.$row->levelID.'">'.$row->level_desc.'</option>';
+     }
+     ?>
+   </select>
+ </div>
+ <br />
+ <div class="form-group">
    <select name="subject" id="subject" class="form-control input-lg">
     <option value="">Select the Subject</option>
-    <?php
-    foreach($subjects as $row)
-    {
-     echo '<option value="'.$row->subID.'">'.$row->sub_desc.'</option>';
-   }
-   ?>
- </select>
+  </select>
 </div>
 <br />
+
 <div class="form-group">
  <select name="module" id="module" class="form-control input-lg">
   <option value="">Select the Module</option>
@@ -40,15 +51,42 @@
 <br />
 <div class="form-group">
  <select name="lesson" id="lesson" class="form-control input-lg">
-  <option value="">Select the Lesson_A</option>
+  <option value="">Select the Lesson</option>
 </select>
 </div>
 </div>
+
 </body>
 </html>
 <script>
+  
   $(document).ready(function()
   {
+   $('#level').change(function(){
+    var levelID = $('#level').val();
+    if(levelID != '')
+    {
+     $.ajax({
+      url:"<?php echo base_url(); ?>Course_selection/fetch_subjects",
+      method:"POST",
+      data:{levelID:levelID},
+      success:function(data)
+      {
+       $('#subject').html(data);
+       $('#module').html('<option value="">Select Module</option>');
+       $('#lesson').html('<option value="">Select Lesson</option>');
+     }
+   });
+   }
+   else
+   {
+     $('#subject').html('<option value="">Select Subject</option>');
+     $('#module').html('<option value="">Select Module</option>');
+     $('#lesson').html('<option value="">Select Lesson</option>');
+   }
+ });
+
+
    $('#subject').change(function(){
     var subID = $('#subject').val();
     if(subID != '')
@@ -58,38 +96,41 @@
       method:"POST",
       data:{subID:subID},
       success:function(data)
-      {
+       {
        $('#module').html(data);
-       $('#lesson').html('<option value="">Select Lesson_B</option>');
+       $('#lesson').html('<option value="">Select Lesson</option>');
      }
    });
    }
    else
    {
-     $('#module').html('<option value="">Select Module_C</option>');
-     $('#lesson').html('<option value="">Select Lesson_C</option>');
+     $('#module').html('<option value="">Select Module</option>');
+     $('#lesson').html('<option value="">Select Lesson</option>');
    }
  });
 
-   $('#module').change(function(){
-    var moduleID = $('#module').val();
-    if(moduleID != '')
-    {
-     $.ajax({
-      url:"<?php echo base_url(); ?>Course_selection/fetch_lessons",
-      method:"POST",
-      data:{moduleID:moduleID},
-      success:function(data)
-      {
-       $('#lesson').html(data);
-     }
-   });
-   }
-   else
-   {
-     $('#lesson').html('<option value="">Select Lesson_d</option>');
-   }
- });
 
- });
-</script>
+
+        $('#module').change(function(){
+          var moduleID = $('#module').val();
+          if(moduleID != '')
+          {
+           $.ajax({
+            url:"<?php echo base_url(); ?>Course_selection/fetch_lessons",
+            method:"POST",
+            data:{moduleID:moduleID},
+            success:function(data)
+            {
+             $('#lesson').html(data);
+           }
+         });
+         }
+         else
+         {
+           $('#lesson').html('<option value="">Select Lesson</option>');
+         }
+       });
+
+      });
+    </script>
+
