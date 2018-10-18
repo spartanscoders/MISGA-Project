@@ -52,3 +52,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+$route['lessons'] = 'lessons';
+$route['lessons/create'] = 'lessons/create';
+
+$route['lessons/edit/(:any)'] = 'lessons/edit/$1';
+
+$route['lessons/view/(:any)'] = 'lessons/view/$1';
+$route['lessons/(:any)'] = 'lessons/view/$1';

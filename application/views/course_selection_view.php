@@ -49,11 +49,14 @@
 </select>
 </div>
 <br />
+     <form action="view" method="get">
 <div class="form-group">
  <select name="lesson" id="lesson" class="form-control input-lg">
   <option value="">Select the Lesson</option>
 </select>
+    <button type="submit" >View Lesson</button>
 </div>
+     </form>
 </div>
 
 </body>

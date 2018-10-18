@@ -15,6 +15,7 @@ class Course_selection extends CI_Controller {
 		$data['levels'] = $this->course_selection_model->fetch_levels();
 		$this->load->view('course_selection_view', $data);		
 	}
+
 	
 	function fetch_subjects()
 	{
@@ -23,6 +24,13 @@ class Course_selection extends CI_Controller {
 			echo $this->course_selection_model->fetch_subjects($this->input->post('levelID'));
 		}
 	}
+
+
+    function view()
+    {
+        $data = $this->course_selection_model->fetch_selected_lesson('LES0001');
+        $this->load->view('lesson_view', $data);
+    }
 
 
 	function fetch_modules()
